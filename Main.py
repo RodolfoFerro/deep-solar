@@ -1,13 +1,13 @@
 import streamlit as st
 
-from utils.descriptions import INFO
+from descriptions import INFO
 
 st.set_page_config(
     page_title="Deep Solar",
     page_icon="☀️",
 )
 
-st.write("# Welcome to Seep Solar! 👋")
+st.write("# Welcome to Deep Solar! 👋")
 
 st.markdown(INFO['challenge'])
 st.markdown(INFO['solution'])

@@ -1,6 +1,6 @@
 import streamlit as st
 
-from utils.descriptions import RESULTS
+from descriptions import RESULTS
 
 st.set_page_config(page_title="Results", page_icon="📈")
 st.sidebar.markdown("""

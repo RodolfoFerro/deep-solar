@@ -1,7 +1,7 @@
 import streamlit as st
 
-from utils.descriptions import AUTOENCODERS
-from utils.descriptions import AUTOENCODERS_IMGS
+from descriptions import AUTOENCODERS
+from descriptions import AUTOENCODERS_IMGS
 
 st.set_page_config(page_title="Autoencoders", page_icon="🧠")
 st.sidebar.markdown("""

@@ -168,6 +168,12 @@ RESULTS = [
     ratios between the signal peak values are fed into a table lookup to
     estimate the flow angle and complete the velocity vector.
 
+    > **Notes:** 
+    > - Data from [_Wind dataset_](https://cdaweb.gsfc.nasa.gov/pub/data/wind/mfi/mfi_h2/2022/)
+    >    is available from 1994 (1994-11-13) to 2022 (2022-09-17).
+    > - Data form [_DSCOVR magnetic field dataset_](https://cdaweb.gsfc.nasa.gov/pub/data/dscovr/h0/mag/2022/)
+    >    is available from 2015 (2015-06-08) to 2022 (2022-09-17).
+
     ### Our approach
 
     As mentioned in the previous sections, we are using autoencoders for:
@@ -183,7 +189,7 @@ RESULTS = [
     > order to reconstruct original data. The reconstructed data is then
     > compared with the original data to find the difference between them.
     > The difference is then used to find the anomalies in the data.
-
+    
     ##### Model 1 (Full features)
 
     The first model was trained on the raw data. 
@@ -196,7 +202,7 @@ RESULTS = [
     The raw data corresponding to coordinates in `BGSE` format was converted
     into a single Real Number value using the norm of the vector.
 
-    > Note:
+    > **Notes:** 
     > - **BGSE:** Geocentric Solar Ecliptic system. This has its X-axis
     >    pointing from the Earth toward the Sun and its Y-axis is chosen to
     >    be in the ecliptic plane pointing towards dusk (thus opposing

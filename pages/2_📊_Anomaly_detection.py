@@ -1,7 +1,7 @@
 import streamlit as st
 
-from utils.descriptions import ANOMALY_DETECTION
-from utils.descriptions import ANOMALY_DETECTION_IMGS
+from descriptions import ANOMALY_DETECTION
+from descriptions import ANOMALY_DETECTION_IMGS
 
 st.set_page_config(page_title="Anomaly detection", page_icon="📊")
 st.sidebar.markdown("""
