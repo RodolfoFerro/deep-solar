@@ -39,7 +39,7 @@ INFO = {
 
 ANOMALY_DETECTION = [
     """
-    # Anomaly Detection
+    # Anomaly Detection (Srivignesh, 2021)
 
     Anomaly detection is the process of finding abnormalities in data. Abnormal 
     data (an anomaly) is defined as the ones that deviate significantly from 
@@ -47,7 +47,7 @@ ANOMALY_DETECTION = [
     detection include fraud detection, fault detection, and intrusion detection. 
     Anomaly Detection is also referred to as outlier detection.
 
-    ### What is an anomaly?
+    ### What is an anomaly? (Gavrilova, 2021)
 
     Generally speaking, an anomaly is something that differs from a norm: a 
     deviation, an exception. In software engineering, by anomaly we understand 
