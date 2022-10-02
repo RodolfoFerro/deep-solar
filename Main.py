@@ -4,7 +4,7 @@ from utils.descriptions import INFO
 
 st.set_page_config(
     page_title="Deep Solar",
-    page_icon="🌞",
+    page_icon="☀️",
 )
 
 st.write("# Welcome to Seep Solar! 👋")
