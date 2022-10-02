@@ -19,9 +19,10 @@ INFO = {
 
             The project consists of an autoencoder (artifical neural network)
             pipeline packed into an interactive application that fetches data
-            from a specific period in `cfd` format from the official website
-            to identify anomalies in the solar wind. More details about the
-            model used are provided in the corresponding section.
+            from a specific period in `cfd` format from the NASA's Open Data
+            portal for a minor adjustment of model's parameters in order to 
+            identify anomalies in the solar wind. More details about the model
+            used are provided in the corresponding section.
 
             Check our working model in the [aplication section](/Application).
         """,
