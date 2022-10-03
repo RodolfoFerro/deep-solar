@@ -39,8 +39,8 @@ with col_left:
                              min_value=datetime.date(1994, 11, 13),
                              max_value=datetime.date(2022, 9, 17))
 
-    initial_t = st.time_input('Select the starting time:', datetime.time(0, 0))
-    ending_t = st.time_input('Select the ending time:', datetime.time(0, 1))
+    initial_t = st.time_input('Select the starting time:', datetime.time(0, 8))
+    ending_t = st.time_input('Select the ending time:', datetime.time(0, 9))
     st.markdown("""
         > **NOTE:**
         > - Peaks over the threshold line can be considered as possible anomalies ans may need to be checked.
@@ -80,12 +80,14 @@ with col_right:
         fig = make_subplots(rows=2, cols=1)
         fig.append_trace(go.Scatter(x=x,
                                     y=filtered_data[:, 1],
-                                    name='Original signal'),
+                                    name='Original signal',
+                                    line=dict(color='royalblue', width=3)),
                          row=1,
                          col=1)
         fig.append_trace(go.Scatter(x=x,
                                     y=reconst[:, 1],
-                                    name='Reconstructed signal'),
+                                    name='Reconstructed signal',
+                                    line=dict(width=1)),
                          row=1,
                          col=1)
         fig.append_trace(go.Scatter(x=x, y=reconst_errors, name='Errors'),

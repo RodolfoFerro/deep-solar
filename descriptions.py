@@ -48,6 +48,7 @@ INFO = {
             > - The time window must be at least 1 minute long.
             > - The process may take a minute or two while we compute the threshold. The longer the time period, the longer the processing time.
             > - You can directly click the run button to see the results with this input data.
+            > - If you are able to run this web application locally, better (for resources). The code: https://github.com/RodolfoFerro/deep-solar
     """
 }
 
