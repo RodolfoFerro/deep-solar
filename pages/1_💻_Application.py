@@ -42,10 +42,8 @@ with col_left:
     ending_t = st.time_input('Select the ending time:', datetime.time(0, 1))
     st.markdown("""
         > **NOTE:**
-        > - You can also input the time manually.
-        > - The time window must be at least 1 minute long.
-        > - The process may take a minute or two while we compute the threshold. The longer the time period, the longer the processing time.
-        > - You can directly click the run button to see the results with this input data.
+        > - Peaks over the threshold line can be considered as possible anomalies ans may need to be checked.
+        > - A possible interpretation of lower peaks is that they may represent other possibly minor space weather events.
     """)
 
     process = st.button("Identify anomalies 🚀")

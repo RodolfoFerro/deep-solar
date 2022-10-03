@@ -38,6 +38,16 @@ INFO = {
 
             Once you click the button, the process may take a few minutes to
             complete. The results will be displayed in the second column.
+
+            **IMPORTANT:** A smaller version of the model is being used in this
+            version of the application. The full trianed model is still being
+            trained and will be available soon.
+
+            > **NOTE:**
+            > - You can also input the time manually.
+            > - The time window must be at least 1 minute long.
+            > - The process may take a minute or two while we compute the threshold. The longer the time period, the longer the processing time.
+            > - You can directly click the run button to see the results with this input data.
     """
 }
 
