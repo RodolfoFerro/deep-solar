@@ -18,3 +18,9 @@ To activate the virtual environment and install dependencies:
 conda activate nasa
 pip install -r requirements.txt
 ```
+
+To run the web application locally:
+
+```bash
+streamlit run Main.py
+```
