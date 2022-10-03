@@ -35,7 +35,10 @@ INFO = {
             The second column is used to display the results of the model
             trying to reconstruct the original data. This will allow the model
             to identify anomalies in the solar wind.
-        """
+
+            Once you click the button, the process may take a few minutes to
+            complete. The results will be displayed in the second column.
+    """
 }
 
 ANOMALY_DETECTION = [
