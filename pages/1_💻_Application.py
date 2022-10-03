@@ -22,7 +22,8 @@ st.sidebar.markdown("""
 cdf_files = glob('*.cdf')
 for cdf_file in cdf_files:
     os.remove(cdf_file)
-autoencoder = load_model('models/small_model.json', 'models/small_model.h5')
+autoencoder = load_model('models/general_model.json',
+                         'models/general_model.h5')
 process = False
 
 st.markdown(INFO['instructions'])

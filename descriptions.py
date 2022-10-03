@@ -17,9 +17,9 @@ INFO = {
     """
             ### The Solution
 
-            The project consists of an autoencoder (artifical neural network)
+            The project consists of an autoencoder (artificial neural network)
             pipeline packed into an interactive application that fetches data
-            from a specific period in `cfd` format from the NASA's Open Data
+            from a specific period in `cdf` format from the NASA's Open Data
             portal for a minor adjustment of model's parameters in order to 
             identify anomalies in the solar wind. More details about the model
             used are provided in the corresponding section.
@@ -205,9 +205,10 @@ RESULTS = [
     
     ##### Model 1 (Full features)
 
-    The first model was trained on the raw data. 
+    The first model was trained on the raw data. Since data was not completely
+    pre-processed, this model is going to be omitted from the final report.
 
-    _More details will be added._
+    > Another exploration will be added on the future about this.
 
     ##### Model 2 (Compressed data representation)
 
@@ -215,7 +216,7 @@ RESULTS = [
     The raw data corresponding to coordinates in `BGSE` format was converted
     into a single Real Number value using the norm of the vector.
 
-    > **Notes:** 
+    > **Notes:**
     > - **BGSE:** Geocentric Solar Ecliptic system. This has its X-axis
     >    pointing from the Earth toward the Sun and its Y-axis is chosen to
     >    be in the ecliptic plane pointing towards dusk (thus opposing
@@ -233,8 +234,29 @@ RESULTS = [
     corresponding to `BF1` values from the
     [_Wind dataset_](https://cdaweb.gsfc.nasa.gov/pub/data/wind/mfi/mfi_h2/2022/).
 
-    _More details will be added._
+    The autoencoder achitecture can be seen as follows:
     """, """
+    This model was trained with ~29.7 million datapoints containing a time
+    window of one month, with a batch size of 64 for 20 epochs, using the
+    MSLE loss. The training history can be seen as follows:
+    """, """
+    As seen in the training history, the model was able to learn the data
+    representation and was able to reconstruct the data with a low loss.
+    The loss with the validation dataset after training was `5.7263e-08`.
+
+    > **Notes:**
+    > - The loss is calculated using the mean squared log error.
+    > - This low trained model turned out to be efficient, and it was only
+    >    trained 20 epochs since 100 epochs would take around 18 hours to 
+    >    train.
+
+    A test performed to reconstruct a small time window of the data from the
+    most recent day reported (2022-09-17) with the trained model can be seen
+    in the following figure:
+    """, """
+    This trained model has been exported and is being used in this project's
+    application, which can be found in the corresponding section.
+
     ### References
 
     - Space Apps Challenge. 2022. Notional DSCOVR Faraday Cup Instrument “Calibration” and Data Analysis Procedure. [online] Available at: <https://www.spaceappschallenge.org/space-apps-challenge-2022-example-resource-save-the-earth-from-another-carrington-event/> [Accessed 2 October 2022].
@@ -244,4 +266,7 @@ RESULTS = [
     """
 ]
 
-RESULTS_IMGS = ["assets/results.png"]
+RESULTS_IMGS = [
+    "assets/model.png", "assets/results_general.png",
+    "assets/training_general.png"
+]
